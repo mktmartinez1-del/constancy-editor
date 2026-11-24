@@ -1,0 +1,482 @@
+[
+ {
+  "slug": "3d-coin",
+  "categoria": "money-coin"
+ },
+ {
+  "slug": "3d",
+  "categoria": "a"
+ },
+ {
+  "slug": "at",
+  "categoria": "at"
+ },
+ {
+  "slug": "axe",
+  "categoria": "misc"
+ },
+ {
+  "slug": "back",
+  "categoria": "player"
+ },
+ {
+  "slug": "backward",
+  "categoria": "player"
+ },
+ {
+  "slug": "bag",
+  "categoria": "finance"
+ },
+ {
+  "slug": "battery",
+  "categoria": "misc"
+ },
+ {
+  "slug": "blender",
+  "categoria": "a"
+ },
+ {
+  "slug": "bookmark-fav",
+  "categoria": "user"
+ },
+ {
+  "slug": "bookmark",
+  "categoria": "user"
+ },
+ {
+  "slug": "boy",
+  "categoria": "user"
+ },
+ {
+  "slug": "brush",
+  "categoria": "art"
+ },
+ {
+  "slug": "bucket",
+  "categoria": "art"
+ },
+ {
+  "slug": "bulb",
+  "categoria": "misc"
+ },
+ {
+  "slug": "calculator",
+  "categoria": "misc"
+ },
+ {
+  "slug": "calender",
+  "categoria": "misc"
+ },
+ {
+  "slug": "camera",
+  "categoria": "media"
+ },
+ {
+  "slug": "can",
+  "categoria": "misc"
+ },
+ {
+  "slug": "card",
+  "categoria": "finance"
+ },
+ {
+  "slug": "chart",
+  "categoria": "finance"
+ },
+ {
+  "slug": "chat-bubble",
+  "categoria": "user"
+ },
+ {
+  "slug": "chat-text",
+  "categoria": "user"
+ },
+ {
+  "slug": "chat",
+  "categoria": "user"
+ },
+ {
+  "slug": "chess",
+  "categoria": "content"
+ },
+ {
+  "slug": "circle",
+  "categoria": "content"
+ },
+ {
+  "slug": "clock",
+  "categoria": "social"
+ },
+ {
+  "slug": "color-palette",
+  "categoria": "art"
+ },
+ {
+  "slug": "computer",
+  "categoria": "media"
+ },
+ {
+  "slug": "copy",
+  "categoria": "content"
+ },
+ {
+  "slug": "crown",
+  "categoria": "social"
+ },
+ {
+  "slug": "cube",
+  "categoria": "content"
+ },
+ {
+  "slug": "cup",
+  "categoria": "social"
+ },
+ {
+  "slug": "dollar",
+  "categoria": "money-coin"
+ },
+ {
+  "slug": "eth",
+  "categoria": "money-coin"
+ },
+ {
+  "slug": "euro",
+  "categoria": "money-coin"
+ },
+ {
+  "slug": "explorer",
+  "categoria": "social"
+ },
+ {
+  "slug": "eyedropper",
+  "categoria": "art"
+ },
+ {
+  "slug": "fav-folder",
+  "categoria": "document"
+ },
+ {
+  "slug": "figma",
+  "categoria": "a"
+ },
+ {
+  "slug": "file-fav",
+  "categoria": "document"
+ },
+ {
+  "slug": "file-plus",
+  "categoria": "document"
+ },
+ {
+  "slug": "file-text",
+  "categoria": "document"
+ },
+ {
+  "slug": "file",
+  "categoria": "document"
+ },
+ {
+  "slug": "fire",
+  "categoria": "misc"
+ },
+ {
+  "slug": "flag",
+  "categoria": "misc"
+ },
+ {
+  "slug": "flash",
+  "categoria": "misc"
+ },
+ {
+  "slug": "folder",
+  "categoria": "document"
+ },
+ {
+  "slug": "forward",
+  "categoria": "playre"
+ },
+ {
+  "slug": "gift",
+  "categoria": "social"
+ },
+ {
+  "slug": "girl",
+  "categoria": "user"
+ },
+ {
+  "slug": "glass",
+  "categoria": "misc"
+ },
+ {
+  "slug": "gym",
+  "categoria": "misc"
+ },
+ {
+  "slug": "headphone",
+  "categoria": "media"
+ },
+ {
+  "slug": "heart",
+  "categoria": "user"
+ },
+ {
+  "slug": "key",
+  "categoria": "finance"
+ },
+ {
+  "slug": "lab",
+  "categoria": "misc"
+ },
+ {
+  "slug": "link",
+  "categoria": "social"
+ },
+ {
+  "slug": "location",
+  "categoria": "social"
+ },
+ {
+  "slug": "lock",
+  "categoria": "finance"
+ },
+ {
+  "slug": "locker",
+  "categoria": "finance"
+ },
+ {
+  "slug": "magic-trick",
+  "categoria": "misc"
+ },
+ {
+  "slug": "mail",
+  "categoria": "document"
+ },
+ {
+  "slug": "map-pin",
+  "categoria": "social"
+ },
+ {
+  "slug": "medal",
+  "categoria": "user"
+ },
+ {
+  "slug": "megaphone",
+  "categoria": "media"
+ },
+ {
+  "slug": "mic",
+  "categoria": "media"
+ },
+ {
+  "slug": "minecraft",
+  "categoria": "misc"
+ },
+ {
+  "slug": "mobile",
+  "categoria": "media"
+ },
+ {
+  "slug": "money-bag",
+  "categoria": "money"
+ },
+ {
+  "slug": "money",
+  "categoria": "money"
+ },
+ {
+  "slug": "moon",
+  "categoria": "icons"
+ },
+ {
+  "slug": "music",
+  "categoria": "icons"
+ },
+ {
+  "slug": "new-folder",
+  "categoria": "icons"
+ },
+ {
+  "slug": "next",
+  "categoria": "player"
+ },
+ {
+  "slug": "notebook",
+  "categoria": "icons"
+ },
+ {
+  "slug": "notify-heart",
+  "categoria": "icons"
+ },
+ {
+  "slug": "paint-brush",
+  "categoria": "art"
+ },
+ {
+  "slug": "paint-kit",
+  "categoria": "a"
+ },
+ {
+  "slug": "pause",
+  "categoria": "player"
+ },
+ {
+  "slug": "pencil",
+  "categoria": "icons"
+ },
+ {
+  "slug": "phone-end",
+  "categoria": "phone"
+ },
+ {
+  "slug": "phone-incoming",
+  "categoria": "phone"
+ },
+ {
+  "slug": "phone-missing",
+  "categoria": "phone"
+ },
+ {
+  "slug": "phone-only",
+  "categoria": "phone"
+ },
+ {
+  "slug": "phone-outgoing",
+  "categoria": "phone"
+ },
+ {
+  "slug": "phone-ringing",
+  "categoria": "phone"
+ },
+ {
+  "slug": "picture",
+  "categoria": "icons"
+ },
+ {
+  "slug": "pin",
+  "categoria": "icons"
+ },
+ {
+  "slug": "play",
+  "categoria": "player"
+ },
+ {
+  "slug": "plus",
+  "categoria": "at"
+ },
+ {
+  "slug": "pound",
+  "categoria": "money-coin"
+ },
+ {
+  "slug": "puzzle",
+  "categoria": "icons"
+ },
+ {
+  "slug": "rocket",
+  "categoria": "icons"
+ },
+ {
+  "slug": "roll-brush",
+  "categoria": "icons"
+ },
+ {
+  "slug": "rupee",
+  "categoria": "money-coin"
+ },
+ {
+  "slug": "scissor",
+  "categoria": "icons"
+ },
+ {
+  "slug": "setting",
+  "categoria": "icons"
+ },
+ {
+  "slug": "sheild",
+  "categoria": "icons"
+ },
+ {
+  "slug": "sphere",
+  "categoria": "icons"
+ },
+ {
+  "slug": "star",
+  "categoria": "icons"
+ },
+ {
+  "slug": "sun",
+  "categoria": "icons"
+ },
+ {
+  "slug": "takeaway-cup",
+  "categoria": "icons"
+ },
+ {
+  "slug": "target",
+  "categoria": "icons"
+ },
+ {
+  "slug": "tea-cup",
+  "categoria": "icons"
+ },
+ {
+  "slug": "text",
+  "categoria": "at"
+ },
+ {
+  "slug": "thumb-down",
+  "categoria": "icons"
+ },
+ {
+  "slug": "thumb-up",
+  "categoria": "icons"
+ },
+ {
+  "slug": "tick",
+  "categoria": "at"
+ },
+ {
+  "slug": "toggle",
+  "categoria": "icons"
+ },
+ {
+  "slug": "tool",
+  "categoria": "icons"
+ },
+ {
+  "slug": "trash-can",
+  "categoria": "icons"
+ },
+ {
+  "slug": "travel",
+  "categoria": "icons"
+ },
+ {
+  "slug": "trophy",
+  "categoria": "icons"
+ },
+ {
+  "slug": "umbrella",
+  "categoria": "icons"
+ },
+ {
+  "slug": "video-camera",
+  "categoria": "icons"
+ },
+ {
+  "slug": "wallet",
+  "categoria": "icons"
+ },
+ {
+  "slug": "wifi",
+  "categoria": "icons"
+ },
+ {
+  "slug": "yuan",
+  "categoria": "money-coin"
+ },
+ {
+  "slug": "zoom",
+  "categoria": "icons"
+ }
+]

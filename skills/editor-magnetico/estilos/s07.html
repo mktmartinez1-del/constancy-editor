@@ -1,0 +1,64 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #010407; font-family: "Inter", sans-serif; color: #fff; }
+    #root .glow { position: absolute; border-radius: 50%; filter: blur(90px); }
+    #s07-g1 { width: 900px; height: 900px; left: -300px; top: 200px; background: #1532c8; opacity: .55; }
+    #s07-g2 { width: 800px; height: 800px; right: -320px; top: 1000px; background: #0b1a6a; opacity: .7; }
+    #root .ico { position: absolute; border-radius: 28%; background: linear-gradient(150deg, #5c7bff 0%, #2b3fe0 45%, #1022a8 100%); box-shadow: 0 30px 70px rgba(20,40,200,.55), inset 0 4px 0 rgba(255,255,255,.35); display: flex; align-items: center; justify-content: center; }
+    #root .ico svg { width: 55%; height: 55%; }
+    #s07-t1 { position: absolute; left: 0; right: 0; top: 1080px; text-align: center; font-size: 64px; font-weight: 400; letter-spacing: -0.02em; }
+    #s07-t1 b { font-weight: 800; }
+    #s07-search { position: absolute; left: 150px; top: 820px; width: 780px; height: 140px; border-radius: 999px; background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.25); display: flex; align-items: center; padding: 0 50px; gap: 30px; font-size: 48px; opacity: 0; }
+    #s07-stext { white-space: nowrap; overflow: hidden; width: 0; display: inline-block; color: #dfe5ff; }
+    #s07-hero { position: absolute; left: 340px; top: 640px; width: 400px; height: 400px; opacity: 0; }
+    #s07-hero .ico { inset: 0; }
+    #s07-t2 { position: absolute; left: 0; right: 0; top: 460px; text-align: center; font-size: 70px; letter-spacing: -0.02em; opacity: 0; }
+    #s07-t2 b { font-weight: 800; color: #8fa5ff; }
+    #s07-t3 { position: absolute; left: 0; right: 0; top: 1120px; text-align: center; font-size: 64px; opacity: 0; }
+    #s07-cta { position: absolute; left: 0; right: 0; top: 520px; text-align: center; opacity: 0; }
+    #s07-c1 { font-size: 64px; }
+    #s07-c2 { font-size: 150px; font-weight: 900; letter-spacing: -0.04em; color: #fff; }
+    #s07-chat { position: absolute; left: 390px; top: 860px; width: 300px; height: 300px; opacity: 0; }
+    #s07-chat .ico { inset: 0; border-radius: 50%; }
+    #s07-c3 { position: absolute; left: 0; right: 0; top: 1220px; text-align: center; font-size: 56px; opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="s07" data-width="1080" data-height="1920">
+    <div id="s07-g1" class="glow"></div>
+    <div id="s07-g2" class="glow"></div>
+    <div id="s07-i1" class="ico" style="left:120px;top:420px;width:170px;height:170px"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+    <div id="s07-i2" class="ico" style="left:780px;top:360px;width:200px;height:200px"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><circle cx="11" cy="11" r="6"/><path d="M16 16l5 5"/></svg></div>
+    <div id="s07-i3" class="ico" style="left:700px;top:1320px;width:150px;height:150px"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M4 6h16v10H8l-4 4z"/></svg></div>
+    <div id="s07-i4" class="ico" style="left:160px;top:1380px;width:130px;height:130px"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12l4 4 10-10"/></svg></div>
+    <div id="s07-t1">seu conteúdo<br />ainda é <b>invisível?</b></div>
+    <div id="s07-search"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><circle cx="11" cy="11" r="6"/><path d="M16 16l5 5"/></svg><span id="s07-stext">como ter estrutura</span></div>
+    <div id="s07-t2">eu <b>resolvi</b> isso</div>
+    <div id="s07-hero"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3l2.6 5.6L20 9.3l-4 4 1 5.7-5-2.8-5 2.8 1-5.7-4-4 5.4-.7z"/></svg></div></div>
+    <div id="s07-t3">com um <b>método</b></div>
+    <div id="s07-cta"><div id="s07-c1">comente</div><div id="s07-c2">"estilo"</div></div>
+    <div id="s07-chat"><div class="ico"><svg viewBox="0 0 24 24" fill="#fff"><circle cx="7" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="17" cy="12" r="1.8"/></svg></div></div>
+    <div id="s07-c3">que eu te mando o link</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s07-g1", { x: 0, y: 0 }, { x: 300, y: 200, duration: 7, ease: "power1.inOut" }, 0);
+    tl.fromTo("#s07-g2", { x: 0 }, { x: -260, duration: 7, ease: "power1.inOut" }, 0);
+    tl.fromTo(["#s07-i1", "#s07-i2", "#s07-i3", "#s07-i4"], { opacity: 0, scale: 0.3, rotation: -30, filter: "blur(10px)" }, { opacity: 1, scale: 1, rotation: 0, filter: "blur(0px)", duration: 0.6, ease: "back.out(1.5)", stagger: 0.1 }, 0);
+    tl.fromTo(["#s07-i1", "#s07-i2", "#s07-i3", "#s07-i4"], { y: 0 }, { y: -60, rotation: 8, duration: 2.2, ease: "power1.inOut" }, 0.6);
+    tl.fromTo("#s07-t1", { opacity: 0, y: 30, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.25);
+    tl.fromTo("#s07-search", { opacity: 0, scaleX: 0.3 }, { opacity: 1, scaleX: 1, duration: 0.45, ease: "expo.out" }, 0.9);
+    tl.fromTo("#s07-stext", { width: 0 }, { width: 500, duration: 0.8, ease: "steps(18)" }, 1.25);
+    tl.to(["#s07-i1", "#s07-i2", "#s07-i3", "#s07-i4", "#s07-t1"], { opacity: 0, scale: 1.5, filter: "blur(20px)", duration: 0.3, ease: "power3.in" }, 2.3);
+    tl.to("#s07-search", { scaleX: 0.15, scaleY: 1.8, opacity: 0, filter: "blur(16px)", duration: 0.3, ease: "power3.in" }, 2.3);
+    tl.fromTo("#s07-t2", { opacity: 0, filter: "blur(12px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 2.55);
+    tl.fromTo("#s07-hero", { opacity: 0, scale: 0.3, rotation: -45 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.65, ease: "back.out(1.4)" }, 2.6);
+    tl.fromTo("#s07-t3", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 3.1);
+    tl.to("#s07-hero", { rotation: 45, scale: 1.35, duration: 1.2, ease: "power2.inOut" }, 3.3);
+    tl.to(["#s07-hero", "#s07-t2", "#s07-t3"], { opacity: 0, scale: 2.2, filter: "blur(20px)", duration: 0.3, ease: "power3.in" }, 4.5);
+    tl.fromTo("#s07-c1", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, 4.75);
+    tl.to("#s07-cta", { opacity: 1, duration: 0.01 }, 4.75);
+    tl.fromTo("#s07-c2", { opacity: 0, scale: 0.8, filter: "blur(12px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 4.9);
+    tl.fromTo("#s07-chat", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.7)" }, 5.1);
+    tl.fromTo("#s07-c3", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 5.4);
+    window.__timelines["s07"] = tl;
+  </script>
+</template>

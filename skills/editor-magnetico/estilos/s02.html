@@ -1,0 +1,61 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: radial-gradient(120% 70% at 50% 45%, #0b2a8f 0%, #061347 38%, #01030c 75%); font-family: "Inter", sans-serif; perspective: 1400px; }
+    #s02-grid { position: absolute; inset: -200px; background-image: radial-gradient(circle, rgba(90,140,255,.18) 2px, transparent 2.5px); background-size: 46px 46px; opacity: .5; }
+    #s02-phone { position: absolute; left: 330px; top: 520px; width: 420px; height: 860px; border-radius: 64px; background: linear-gradient(160deg, #1d2333, #07090f); border: 6px solid #3a4258; box-shadow: 0 0 120px rgba(40,90,255,.55), inset 0 0 0 3px #0c0f17; transform-style: preserve-3d; }
+    #s02-scr { position: absolute; inset: 18px; border-radius: 48px; background: linear-gradient(180deg, #0d1426, #050811); overflow: hidden; }
+    #s02-av { position: absolute; left: 34px; top: 70px; width: 110px; height: 110px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #4d7dff, #1e4bff 60%, #0b1f8a); box-shadow: 0 0 40px #1e4bff; }
+    #root .bar { position: absolute; height: 16px; border-radius: 8px; background: #2a3550; }
+    #root .tile { position: absolute; width: 112px; height: 150px; border-radius: 10px; }
+    #s02-words { position: absolute; left: 0; right: 0; top: 640px; height: 700px; text-align: center; transform-style: preserve-3d; }
+    #root .w { position: absolute; left: 0; right: 0; font-weight: 900; letter-spacing: -0.04em; }
+    #s02-w1 { top: 0; font-size: 130px; color: #e8ecf8; text-shadow: 0 0 40px rgba(255,255,255,.35); }
+    #s02-w2 { top: 150px; font-size: 170px; color: #a76bff; text-shadow: 0 0 50px rgba(167,107,255,.8); }
+    #s02-w3 { top: 340px; font-size: 150px; color: #ffd84a; text-shadow: 0 0 50px rgba(255,216,74,.7); }
+    #s02-logo { position: absolute; left: 0; right: 0; top: 820px; text-align: center; }
+    #s02-lt { font-size: 200px; font-weight: 900; letter-spacing: -0.05em; color: #fff; text-shadow: 0 0 60px rgba(120,160,255,.9); }
+    #s02-ls { font-size: 40px; letter-spacing: .6em; color: #9fb6ff; margin-top: 10px; padding-left: .6em; }
+  </style>
+  <div id="root" data-composition-id="s02" data-width="1080" data-height="1920">
+    <div id="s02-grid"></div>
+    <div id="s02-phone">
+      <div id="s02-scr">
+        <div id="s02-av"></div>
+        <div class="bar" style="left:170px;top:90px;width:180px;background:#4b5a80"></div>
+        <div class="bar" style="left:170px;top:130px;width:130px"></div>
+        <div class="bar" style="left:34px;top:220px;width:310px"></div>
+        <div class="bar" style="left:34px;top:254px;width:240px"></div>
+        <div class="tile" style="left:12px;top:320px;background:linear-gradient(160deg,#3b2a8f,#120a3a)"></div>
+        <div class="tile" style="left:130px;top:320px;background:linear-gradient(160deg,#1e4bff,#0a1a5c)"></div>
+        <div class="tile" style="left:248px;top:320px;background:linear-gradient(160deg,#ff3d6e,#4a0a20)"></div>
+        <div class="tile" style="left:12px;top:478px;background:linear-gradient(160deg,#00c2ff,#03304a)"></div>
+        <div class="tile" style="left:130px;top:478px;background:linear-gradient(160deg,#ffd84a,#4a3a05)"></div>
+        <div class="tile" style="left:248px;top:478px;background:linear-gradient(160deg,#a76bff,#2a0a5a)"></div>
+      </div>
+    </div>
+    <div id="s02-words">
+      <div id="s02-w1" class="w">seu</div>
+      <div id="s02-w2" class="w">conteúdo</div>
+      <div id="s02-w3" class="w">invisível?</div>
+    </div>
+    <div id="s02-logo">
+      <div id="s02-ls">COMENTE</div>
+      <div id="s02-lt">ESTILO</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s02-grid", { y: 0 }, { y: -120, duration: 7, ease: "none" }, 0);
+    tl.fromTo("#s02-phone", { rotationY: -40, rotationX: 18, rotationZ: -12, scale: 0.55, opacity: 0 }, { rotationY: 18, rotationX: 8, rotationZ: 4, scale: 1, opacity: 1, duration: 1.6, ease: "expo.out" }, 0);
+    tl.to("#s02-phone", { rotationY: 32, rotationX: 4, scale: 1.25, duration: 1.0, ease: "power2.inOut" }, 1.6);
+    tl.to("#s02-phone", { scale: 3.2, rotationY: 70, opacity: 0, filter: "blur(16px)", duration: 0.35, ease: "power3.in" }, 2.6);
+    tl.fromTo("#s02-w1", { opacity: 0, rotationX: -90, y: 40 }, { opacity: 1, rotationX: 0, y: 0, duration: 0.5, ease: "expo.out" }, 2.85);
+    tl.fromTo("#s02-w2", { opacity: 0, rotationY: 80, scale: 1.4, filter: "blur(10px)" }, { opacity: 1, rotationY: 0, scale: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 3.25);
+    tl.fromTo("#s02-w3", { opacity: 0, rotationX: 90, z: -400 }, { opacity: 1, rotationX: 0, z: 0, duration: 0.55, ease: "expo.out" }, 3.7);
+    tl.fromTo("#s02-words", { rotationY: -8 }, { rotationY: 10, duration: 2.2, ease: "none" }, 2.85);
+    tl.to(["#s02-w1", "#s02-w2", "#s02-w3"], { opacity: 0, z: 500, filter: "blur(18px)", duration: 0.3, ease: "power3.in", stagger: 0.04 }, 5.0);
+    tl.fromTo("#s02-lt", { opacity: 0, scale: 0.6, filter: "blur(20px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 5.35);
+    tl.fromTo("#s02-ls", { opacity: 0, scaleX: 1.5 }, { opacity: 1, scaleX: 1, duration: 0.7, ease: "expo.out" }, 5.5);
+    window.__timelines["s02"] = tl;
+  </script>
+</template>

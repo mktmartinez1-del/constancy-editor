@@ -1,0 +1,61 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0d0b0a; font-family: "Inter", sans-serif; color: #fff; }
+    #s10-ph { position: absolute; inset: -80px; background: radial-gradient(40% 25% at 20% 30%, #5a2a22 0%, transparent 70%), radial-gradient(45% 30% at 85% 35%, #2f4a2a 0%, transparent 70%), linear-gradient(180deg, #2a2624 0%, #121010 60%, #0b0a09 100%); }
+    #s10-ph svg { position: absolute; left: 50%; top: 380px; transform: translateX(-50%); }
+    #root .tag { position: absolute; left: 0; right: 0; top: 1420px; text-align: center; font: 600 30px "JetBrains Mono", monospace; color: rgba(255,255,255,.35); letter-spacing: .12em; }
+    #root .kin { position: absolute; left: 0; right: 0; text-align: center; }
+    #root .sm { font-size: 60px; font-weight: 700; color: #fff; text-shadow: 0 4px 20px rgba(0,0,0,.6); }
+    #root .lg { font-size: 170px; font-weight: 900; letter-spacing: -0.05em; color: #d4ff3a; text-shadow: 0 0 40px rgba(212,255,58,.55), 0 6px 20px rgba(0,0,0,.5); line-height: 1; position: relative; display: inline-block; }
+    #s10-strike { position: absolute; left: -20px; right: -20px; top: 50%; height: 12px; background: #ff2b4a; border-radius: 6px; transform-origin: 0 50%; box-shadow: 0 0 20px #ff2b4a; }
+    #s10-flute { position: absolute; inset: 0; background: repeating-linear-gradient(90deg, rgba(255,255,255,.75) 0 6px, rgba(255,255,255,.08) 6px 22px); opacity: 0; }
+    #s10-hud { position: absolute; inset: 0; opacity: 0; }
+    #root .cr { position: absolute; width: 70px; height: 70px; border-color: rgba(255,255,255,.85); border-style: solid; }
+    #s10-rec { position: absolute; left: 110px; top: 300px; font: 700 34px "Inter", sans-serif; letter-spacing: .08em; display: flex; align-items: center; gap: 14px; }
+    #s10-rec i { width: 22px; height: 22px; border-radius: 50%; background: #ff2b4a; box-shadow: 0 0 14px #ff2b4a; display: block; }
+    #root .alert { position: absolute; left: 170px; width: 740px; height: 110px; border-radius: 22px; background: linear-gradient(90deg, rgba(120,10,30,.9), rgba(60,5,15,.75)); border: 2px solid rgba(255,80,110,.6); display: flex; align-items: center; gap: 24px; padding: 0 36px; font-size: 46px; font-weight: 600; opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="s10" data-width="1080" data-height="1920">
+    <div id="s10-ph"><svg width="820" height="1300" viewBox="0 0 820 1300"><ellipse cx="410" cy="270" rx="170" ry="210" fill="#0a0908" opacity=".9"/><path d="M30 1300 C50 820 230 560 410 560 C590 560 770 820 790 1300 Z" fill="#0a0908" opacity=".93"/></svg></div>
+    <div class="tag" data-layout-ignore>SUA GRAVAÇÃO</div>
+    <div id="s10-a" class="kin" style="top:960px"><div id="s10-a1" class="sm">se o seu</div><div id="s10-a2" class="lg">CONTEÚDO<div id="s10-strike"></div></div><div id="s10-a3" class="sm">não tem estrutura</div></div>
+    <div id="s10-flute"></div>
+    <div id="s10-b" class="kin" style="top:340px;opacity:0"><div class="sm" style="text-align:left;padding-left:120px">você sabe que</div><div id="s10-b2" class="lg" style="font-size:190px">importa</div></div>
+    <div id="s10-hud">
+      <div class="cr" style="left:80px;top:270px;border-width:6px 0 0 6px"></div>
+      <div class="cr" style="right:80px;top:270px;border-width:6px 6px 0 0"></div>
+      <div class="cr" style="left:80px;top:1260px;border-width:0 0 6px 6px"></div>
+      <div class="cr" style="right:80px;top:1260px;border-width:0 6px 6px 0"></div>
+      <div id="s10-rec"><i></i>REC</div>
+      <div id="s10-al1" class="alert" style="top:1000px">⚠ o que falar?</div>
+      <div id="s10-al2" class="alert" style="top:1130px">✕ como vender com isso?</div>
+    </div>
+    <div id="s10-c" class="kin" style="top:900px;opacity:0"><div class="sm">a gente</div><div id="s10-c2" class="lg" style="font-size:200px">resolve.</div><div class="sm" style="font-size:52px;margin-top:20px">comente <b style="color:#d4ff3a">ESTILO</b></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#s10-a1", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25, ease: "expo.out" }, 0.05);
+    tl.fromTo("#s10-a2", { opacity: 0, scale: 0.8, filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 0.35);
+    tl.fromTo("#s10-ph", { scale: 1.0 }, { scale: 1.16, duration: 0.2, ease: "power3.out" }, 0.35);
+    tl.fromTo("#s10-a3", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25, ease: "expo.out" }, 0.9);
+    tl.fromTo("#s10-strike", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power3.out" }, 1.3);
+    // fluted glass transition
+    tl.to("#s10-flute", { opacity: 1, duration: 0.18, ease: "power2.in" }, 2.0);
+    tl.fromTo("#s10-flute", { backgroundPositionX: "0px" }, { backgroundPositionX: "180px", duration: 0.6, ease: "power2.inOut" }, 2.0);
+    tl.to("#s10-a", { opacity: 0, filter: "blur(10px)", duration: 0.15 }, 2.15);
+    tl.to("#s10-ph", { scale: 1.02, x: 30, duration: 0.01 }, 2.3);
+    tl.to("#s10-flute", { opacity: 0, duration: 0.3, ease: "power2.out" }, 2.4);
+    tl.to("#s10-b", { opacity: 1, duration: 0.01 }, 2.45);
+    tl.fromTo("#s10-b2", { opacity: 0, scale: 1.25, filter: "blur(18px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 2.55);
+    tl.to("#s10-b", { opacity: 0, y: -40, filter: "blur(12px)", duration: 0.2, ease: "power3.in" }, 3.5);
+    tl.fromTo("#s10-hud", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 3.55);
+    tl.fromTo(".cr", { scale: 1.4 }, { scale: 1, duration: 0.4, ease: "expo.out" }, 3.55);
+    tl.fromTo("#s10-al1", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, 3.75);
+    tl.fromTo("#s10-al2", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, 4.0);
+    tl.to("#s10-hud", { opacity: 0, filter: "blur(12px)", duration: 0.2 }, 4.75);
+    tl.to("#s10-ph", { scale: 1.14, duration: 0.25, ease: "power3.out" }, 4.8);
+    tl.to("#s10-c", { opacity: 1, duration: 0.01 }, 4.85);
+    tl.fromTo("#s10-c2", { opacity: 0, scale: 0.8, filter: "blur(16px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 4.9);
+    window.__timelines["s10"] = tl;
+  </script>
+</template>

@@ -1,0 +1,61 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0b0d0f; font-family: "Inter", sans-serif; color: #fff; }
+    #s08-foot { position: absolute; inset: 0; }
+    #s08-ph { position: absolute; inset: -60px; background: radial-gradient(60% 40% at 25% 25%, #3d5a5c 0%, transparent 70%), radial-gradient(50% 35% at 80% 15%, #6b5a3c 0%, transparent 70%), linear-gradient(180deg, #1c2224 0%, #0b0d0f 100%); }
+    #s08-ph svg { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); }
+    #root .tag { position: absolute; left: 0; right: 0; top: 1420px; text-align: center; font: 600 30px "JetBrains Mono", monospace; color: rgba(255,255,255,.4); letter-spacing: .12em; }
+    #s08-cap { position: absolute; left: 0; right: 0; top: 960px; text-align: center; }
+    #s08-cap1 { font-size: 64px; font-weight: 600; text-shadow: 0 4px 20px rgba(0,0,0,.7); }
+    #s08-cap2 { font-size: 110px; font-weight: 800; letter-spacing: -0.03em; text-shadow: 0 4px 20px rgba(0,0,0,.7); position: relative; display: inline-block; }
+    #s08-ul { position: absolute; left: 10px; right: 10px; bottom: -10px; height: 12px; border-radius: 6px; background: #3ee7d0; box-shadow: 0 0 24px #3ee7d0; transform-origin: 0 50%; }
+    #s08-dim { position: absolute; inset: 0; background: rgba(0,0,0,.65); opacity: 0; }
+    #s08-card { position: absolute; left: 190px; top: 520px; width: 700px; height: 820px; border-radius: 36px; background: linear-gradient(160deg, rgba(60,66,72,.92), rgba(24,27,30,.95)); border: 2px solid rgba(255,255,255,.18); box-shadow: 0 50px 100px rgba(0,0,0,.6); padding: 70px 60px; opacity: 0; }
+    #s08-ct { font-size: 50px; font-weight: 600; margin-bottom: 40px; }
+    #root .row { display: flex; gap: 26px; align-items: baseline; padding: 22px 0; border-bottom: 2px solid rgba(255,255,255,.15); font-size: 46px; color: #e5e8ea; opacity: 0; }
+    #root .row b { font: 500 32px "JetBrains Mono", monospace; color: #8a9196; }
+    #s08-chart { position: absolute; left: 60px; bottom: 60px; width: 580px; height: 260px; overflow: visible; }
+    #s08-win { position: absolute; left: 0; right: 0; top: 380px; text-align: center; font-size: 80px; font-weight: 600; color: #86ff5a; text-shadow: 0 0 30px rgba(134,255,90,.6); opacity: 0; }
+    #s08-trophy { position: absolute; left: 380px; top: 720px; width: 320px; height: 420px; opacity: 0; }
+    #s08-cta { position: absolute; left: 0; right: 0; top: 1180px; text-align: center; font-size: 60px; opacity: 0; }
+    #s08-cta b { font-weight: 900; color: #ffd23a; }
+  </style>
+  <div id="root" data-composition-id="s08" data-width="1080" data-height="1920">
+    <div id="s08-foot">
+      <div id="s08-ph"><svg width="900" height="1200" viewBox="0 0 900 1200"><ellipse cx="450" cy="420" rx="190" ry="230" fill="#0a0c0d" opacity=".92"/><path d="M40 1200 C70 830 250 700 450 700 C650 700 830 830 860 1200 Z" fill="#0a0c0d" opacity=".95"/></svg></div>
+      <div class="tag" data-layout-ignore>SUA GRAVAÇÃO</div>
+    </div>
+    <div id="s08-cap"><div id="s08-cap1">se o seu conteúdo</div><div id="s08-cap2">não tem estrutura<div id="s08-ul"></div></div></div>
+    <div id="s08-dim"></div>
+    <div id="s08-card">
+      <div id="s08-ct">O que falta</div>
+      <div id="s08-r1" class="row"><b>01</b>roteiro</div>
+      <div id="s08-r2" class="row"><b>02</b>ritmo</div>
+      <div id="s08-r3" class="row"><b>03</b>estrutura</div>
+      <svg id="s08-chart" viewBox="0 0 580 260"><polyline id="s08-line" points="0,240 90,170 160,200 250,110 330,150 430,50 580,10" fill="none" stroke="#86ff5a" stroke-width="8" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" style="filter:drop-shadow(0 0 10px #86ff5a)"/></svg>
+    </div>
+    <div id="s08-win">o resultado</div>
+    <svg id="s08-trophy" viewBox="0 0 320 420"><path d="M70 30 H250 V120 C250 190 210 240 160 250 C110 240 70 190 70 120 Z" fill="#f2c14e" stroke="#a87a12" stroke-width="6"/><path d="M70 60 H20 C20 130 50 160 80 165 M250 60 H300 C300 130 270 160 240 165" fill="none" stroke="#f2c14e" stroke-width="16"/><rect x="140" y="250" width="40" height="70" fill="#d9a632"/><rect x="80" y="320" width="160" height="40" rx="8" fill="#f2c14e"/><rect x="60" y="360" width="200" height="44" rx="8" fill="#a87a12"/></svg>
+    <div id="s08-cta">comente <b>ESTILO</b></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s08-ph", { scale: 1, x: 0 }, { scale: 1.08, x: -20, duration: 1.4, ease: "none" }, 0);
+    tl.fromTo("#s08-cap1", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, 0.1);
+    tl.fromTo("#s08-cap2", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 0.6);
+    tl.fromTo("#s08-ul", { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.out" }, 0.95);
+    tl.to("#s08-ph", { scale: 1.18, duration: 0.25, ease: "power3.out" }, 1.4);
+    tl.to("#s08-cap", { opacity: 0, filter: "blur(12px)", duration: 0.2 }, 1.9);
+    tl.to("#s08-dim", { opacity: 1, duration: 0.3 }, 1.9);
+    tl.fromTo("#s08-card", { opacity: 0, rotationY: -35, rotationX: 15, scale: 0.8, transformPerspective: 1400 }, { opacity: 1, rotationY: -12, rotationX: 6, scale: 1, duration: 0.6, ease: "expo.out" }, 2.0);
+    tl.fromTo("#s08-ct", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 2.2);
+    tl.fromTo(["#s08-r1", "#s08-r2", "#s08-r3"], { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out", stagger: 0.3 }, 2.4);
+    tl.fromTo("#s08-line", { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.9, ease: "power2.inOut" }, 3.2);
+    tl.to("#s08-card", { rotationY: 12, duration: 2.0, ease: "none" }, 2.6);
+    tl.to("#s08-card", { opacity: 0, scale: 0.6, y: -200, filter: "blur(14px)", duration: 0.3, ease: "power3.in" }, 4.4);
+    tl.fromTo("#s08-win", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 4.65);
+    tl.fromTo("#s08-trophy", { opacity: 0, y: 200, rotation: -10, scale: 0.6 }, { opacity: 1, y: 0, rotation: 0, scale: 1, duration: 0.7, ease: "back.out(1.4)" }, 4.7);
+    tl.fromTo("#s08-cta", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 5.4);
+    window.__timelines["s08"] = tl;
+  </script>
+</template>

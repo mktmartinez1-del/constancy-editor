@@ -1,0 +1,94 @@
+{
+ "01": {
+  "nome": "Dica de valor",
+  "obrigatorios": [
+   "principal"
+  ],
+  "opcionais": [
+   "demo",
+   "a",
+   "b",
+   "fechamento"
+  ]
+ },
+ "02": {
+  "nome": "Dor e solução",
+  "obrigatorios": [
+   "principal"
+  ],
+  "opcionais": [
+   "situacao",
+   "solucao",
+   "prova",
+   "produto"
+  ]
+ },
+ "03": {
+  "nome": "React",
+  "obrigatorios": [
+   "principal"
+  ],
+  "opcionais": [
+   "fonte",
+   "demo"
+  ]
+ },
+ "04": {
+  "nome": "Comparativo",
+  "obrigatorios": [
+   "a",
+   "b"
+  ],
+  "opcionais": [
+   "principal"
+  ]
+ },
+ "05": {
+  "nome": "Trend com texto",
+  "obrigatorios": [
+   "principal"
+  ],
+  "opcionais": []
+ },
+ "06": {
+  "nome": "Lista e ranking",
+  "obrigatorios": [
+   "principal"
+  ],
+  "opcionais": [
+   "item1",
+   "item2",
+   "item3",
+   "item4",
+   "item5",
+   "fechamento"
+  ]
+ },
+ "07": {
+  "nome": "Storytelling narrado",
+  "obrigatorios": [
+   "locucao",
+   "take1"
+  ],
+  "opcionais": [
+   "take2",
+   "take3",
+   "take4",
+   "take5",
+   "take6",
+   "principal"
+  ]
+ },
+ "08": {
+  "nome": "Conexão real",
+  "obrigatorios": [
+   "principal"
+  ],
+  "opcionais": [
+   "broll1",
+   "broll2",
+   "broll3",
+   "broll4"
+  ]
+ }
+}

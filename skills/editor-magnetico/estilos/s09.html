@@ -1,0 +1,64 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #050605; font-family: "Inter", sans-serif; color: #fff; }
+    #s09-spot { position: absolute; left: 140px; top: -100px; width: 800px; height: 2000px; background: linear-gradient(180deg, rgba(255,255,240,.22) 0%, rgba(255,255,240,.08) 60%, rgba(255,255,240,0) 100%); clip-path: polygon(42% 0, 58% 0, 100% 100%, 0 100%); filter: blur(30px); }
+    #s09-floor { position: absolute; left: 140px; top: 1500px; width: 800px; height: 220px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,255,240,.45), rgba(255,255,240,0)); }
+    #s09-man { position: absolute; left: 290px; top: 820px; width: 500px; height: 860px; }
+    #s09-glass { position: absolute; left: 230px; top: 330px; width: 620px; height: 900px; border-radius: 60px; background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.03)); border: 2px solid rgba(255,255,255,.22); box-shadow: inset 0 2px 0 rgba(255,255,255,.25); }
+    #s09-txt { position: absolute; left: 0; right: 0; top: 440px; text-align: center; }
+    #s09-l1 { font-size: 58px; font-weight: 500; letter-spacing: -0.03em; }
+    #s09-l2 { font: italic 400 76px "Playfair Display", serif; color: #d4ff3a; }
+    #s09-l2 span { font: 500 58px "Inter", sans-serif; color: #fff; font-style: normal; }
+    #s09-wd { position: relative; height: 200px; }
+    #root .big { position: absolute; left: 0; right: 0; font-size: 200px; font-weight: 900; letter-spacing: -0.05em; line-height: 1; background: linear-gradient(180deg, #ffffff 0%, #b9bcc0 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    #root .big i { font-style: normal; color: #d4ff3a; -webkit-text-fill-color: #d4ff3a; }
+    #s09-circ { position: absolute; left: 140px; top: 330px; width: 800px; height: 560px; overflow: visible; }
+    #root .spk { position: absolute; color: #d4ff3a; font-weight: 300; text-shadow: 0 0 18px rgba(212,255,58,.8); }
+    #s09-end { position: absolute; left: 0; right: 0; top: 520px; text-align: center; opacity: 0; }
+    #s09-e1 { font-size: 64px; font-weight: 500; }
+    #s09-e2 { font-size: 230px; font-weight: 900; letter-spacing: -0.05em; color: #d4ff3a; text-shadow: 0 0 60px rgba(212,255,58,.55); line-height: 1; }
+  </style>
+  <div id="root" data-composition-id="s09" data-width="1080" data-height="1920">
+    <div id="s09-spot"></div>
+    <div id="s09-floor"></div>
+    <div id="s09-glass"></div>
+    <svg id="s09-man" viewBox="0 0 500 860"><ellipse cx="250" cy="120" rx="80" ry="98" fill="#121212"/><path d="M110 300 C120 230 180 210 250 210 C320 210 380 230 390 300 L420 560 L330 560 L320 700 L180 700 L170 560 L80 560 Z" fill="#141414"/><path d="M170 700 L150 860 M330 700 L350 860" stroke="#141414" stroke-width="40"/><path d="M90 560 H410" stroke="#1d1d1d" stroke-width="18"/></svg>
+    <div id="s09-txt">
+      <div id="s09-l1" style="position:relative;height:72px"><span id="s09-la" style="position:absolute;left:0;right:0">Você não está</span><span id="s09-lb" style="position:absolute;left:0;right:0;opacity:0">Você está</span></div>
+      <div id="s09-l2">competindo <span>em</span></div>
+      <div id="s09-wd"><div id="s09-w1" class="big">preço<i>.</i></div><div id="s09-w2" class="big">valor<i>.</i></div></div>
+    </div>
+    <svg id="s09-circ" viewBox="0 0 800 560"><path id="s09-cp" d="M120 300 C110 140 300 60 440 70 C620 85 720 200 690 330 C660 460 470 520 320 500 C170 480 120 400 135 300" fill="none" stroke="#d4ff3a" stroke-width="6" opacity=".7" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>
+    <div id="s09-k1" class="spk" style="left:170px;top:520px;font-size:90px">+</div>
+    <div id="s09-k2" class="spk" style="left:860px;top:640px;font-size:110px">×</div>
+    <div id="s09-k3" class="spk" style="left:220px;top:860px;font-size:60px">+</div>
+    <div id="s09-k4" class="spk" style="left:820px;top:420px;font-size:60px">✦</div>
+    <div id="s09-end"><div id="s09-e1">Bora fazer o seu</div><div id="s09-e2">vender.</div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s09-spot", { opacity: 0.4 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 0);
+    tl.fromTo("#s09-man", { scale: 1, y: 0 }, { scale: 1.05, y: -10, duration: 7, ease: "none" }, 0);
+    tl.fromTo("#s09-glass", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.6, ease: "expo.out" }, 0);
+    tl.fromTo("#s09-l1", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "expo.out" }, 0.2);
+    tl.fromTo("#s09-l2", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "expo.out" }, 0.45);
+    tl.fromTo("#s09-w1", { opacity: 0, scale: 0.85, filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.75);
+    tl.fromTo(["#s09-k1", "#s09-k2", "#s09-k3", "#s09-k4"], { opacity: 0, scale: 0, rotation: -90 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.45, ease: "back.out(2)", stagger: 0.08 }, 0.85);
+    tl.to(["#s09-k1", "#s09-k2", "#s09-k3", "#s09-k4"], { rotation: 90, duration: 1.6, ease: "none" }, 1.3);
+    tl.to("#s09-la", { opacity: 0, filter: "blur(8px)", duration: 0.15 }, 2.3);
+    tl.to("#s09-w1", { opacity: 0, y: 30, filter: "blur(16px)", duration: 0.2, ease: "power3.in" }, 2.3);
+    tl.to("#s09-glass", { opacity: 0, scale: 1.05, duration: 0.3 }, 2.3);
+    tl.to(["#s09-k1", "#s09-k2", "#s09-k3", "#s09-k4"], { opacity: 0, duration: 0.2 }, 2.3);
+    tl.fromTo("#s09-w2", { opacity: 0, y: -30, filter: "blur(16px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 2.65);
+    tl.fromTo("#s09-lb", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 2.6);
+    tl.fromTo("#s09-cp", { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.55, ease: "power2.inOut" }, 2.9);
+    tl.to("#s09-cp", { opacity: 0, duration: 0.5 }, 4.0);
+    tl.to("#s09-txt", { opacity: 0, scale: 1.1, filter: "blur(18px)", duration: 0.25, ease: "power3.in" }, 4.4);
+    tl.to("#s09-man", { filter: "blur(10px)", duration: 0.3 }, 4.4);
+    tl.to("#s09-end", { opacity: 1, duration: 0.01 }, 4.75);
+    tl.fromTo("#s09-e1", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "expo.out" }, 4.75);
+    tl.fromTo("#s09-e2", { opacity: 0, scale: 0.8, filter: "blur(16px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, 5.0);
+    tl.to("#s09-man", { filter: "blur(0px)", duration: 0.4 }, 5.0);
+    window.__timelines["s09"] = tl;
+  </script>
+</template>
