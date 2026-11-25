@@ -59,7 +59,18 @@ def proxy(src, dst, info, tmp):
             pre = ["zscale=t=linear:npl=203,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p"]
         elif shutil.which("avconvert"):   # macOS: conversão HDR→SDR nativa da Apple
             entrada = os.path.join(tmp, "sdr.mov")
-            sh(["avconvert", "-s", src, "-p", "Preset1920x1080", "-o", entrada, "--replace"], stdout=subprocess.DEVNULL)
+            ok = subprocess.run(["avconvert", "-s", src, "-p", "Preset1920x1080", "-o", entrada, "--replace"],
+                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
+            if not ok:   # avconvert recusa MOV regravado com áudio espacial (apac): tenta só com vídeo + áudio comum
+                limpo = os.path.join(tmp, "sem_apac.mov")
+                subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-map", "0:v:0", "-map", faixa_audio(src),
+                                "-c", "copy", limpo], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                ok = os.path.exists(limpo) and subprocess.run(
+                    ["avconvert", "-s", limpo, "-p", "Preset1920x1080", "-o", entrada, "--replace"],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
+            if not ok:
+                print("  aviso: não consegui converter o HDR; as cores podem ficar um pouco lavadas.")
+                entrada = src
         else:
             print("  aviso: vídeo HDR e este FFmpeg não tem zscale; as cores podem ficar lavadas.")
     vf = ",".join(pre + [esc, "fps=30", "format=yuv420p"])

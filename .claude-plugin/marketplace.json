@@ -6,7 +6,7 @@
       "name": "constancy-editor",
       "source": "./",
       "description": "Editor de vídeo do Método Constancy com os 8 formatos da Copy Magnética.",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   ]
 }

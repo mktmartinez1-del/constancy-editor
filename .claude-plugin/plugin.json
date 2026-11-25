@@ -1,6 +1,6 @@
 {
   "name": "constancy-editor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Editor de vídeo do Método Constancy: escolha o estilo e um dos 8 formatos da Copy Magnética, envie o vídeo e o Claude edita (motion, legendas, cortes, som) no seu computador.",
   "author": { "name": "Rafael Martinez · Método Constancy" },
   "keywords": ["video", "reels", "copy-magnetica", "constancy", "edicao"]
